@@ -4,6 +4,7 @@ import {
     ColorSchemeProvider,
 } from "@mantine/core";
 import { useHotkeys, useLocalStorage } from "@mantine/hooks";
+import { Login } from "./Login/Login";
 import { AppRoutes } from "./routes";
 
 export const App = () => {
@@ -27,7 +28,7 @@ export const App = () => {
                 withNormalizeCSS
                 theme={{ colorScheme }}
             >
-                <AppRoutes />
+                {sessionStorage.getItem("login") ? <AppRoutes /> : <Login />}
             </MantineProvider>
         </ColorSchemeProvider>
     );
