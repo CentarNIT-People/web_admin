@@ -11,6 +11,6 @@ export const useData = (props: useDataInterface) => {
         axios.get(`https://orxdmz.deta.dev/${props.url}`).then((r) => {
             setData(r.data);
         });
-    }, [props.url]);
+    }, []);
     return { data };
 };

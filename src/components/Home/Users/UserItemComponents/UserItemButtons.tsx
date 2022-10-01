@@ -4,7 +4,7 @@ import axios from "axios";
 import { useStyles } from "./UserItemStyles";
 
 const data = [
-    { icon: IconCheck, term: "activate", color: "green", label: "Approve" },
+    { icon: IconCheck, term: "activate", color: "blue", label: "Approve" },
     { icon: IconBan, term: "deactivate", color: "red", label: "Reject" },
 ];
 
