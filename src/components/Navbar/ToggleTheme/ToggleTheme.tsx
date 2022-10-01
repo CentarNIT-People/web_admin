@@ -1,10 +1,5 @@
 import { useMantineColorScheme, ActionIcon, Group } from "@mantine/core";
-import {
-    IconSun,
-    IconMoonStars,
-    IconBrandGithub,
-    IconBrandTwitter,
-} from "@tabler/icons";
+import { IconSun, IconMoonStars, IconWorld } from "@tabler/icons";
 
 export function ToggleTheme() {
     const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -14,8 +9,7 @@ export function ToggleTheme() {
             <ActionIcon
                 size="xl"
                 component="a"
-                href="https://github.com/CentarNIT-People"
-                target="_blank"
+                href="https://centarnit.live"
                 sx={(theme) => ({
                     backgroundColor:
                         theme.colorScheme === "dark"
@@ -25,28 +19,9 @@ export function ToggleTheme() {
                 })}
             >
                 {colorScheme === "dark" ? (
-                    <IconBrandGithub size={18} />
+                    <IconWorld size={18} />
                 ) : (
-                    <IconBrandGithub size={18} />
-                )}
-            </ActionIcon>
-            <ActionIcon
-                size="xl"
-                component="a"
-                href="https://twitter.com/centarnit"
-                target="_blank"
-                sx={(theme) => ({
-                    backgroundColor:
-                        theme.colorScheme === "dark"
-                            ? theme.colors.dark[6]
-                            : theme.colors.gray[0],
-                    color: theme.colors.blue[4],
-                })}
-            >
-                {colorScheme === "dark" ? (
-                    <IconBrandTwitter size={18} />
-                ) : (
-                    <IconBrandTwitter size={18} />
+                    <IconWorld size={18} />
                 )}
             </ActionIcon>
             <ActionIcon
