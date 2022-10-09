@@ -1,9 +1,15 @@
+import React from "react";
 import { useStyles } from "./HeaderStyles";
 
+type HeaderLink = {
+    link:string,
+    label:string
+}
+
 interface HeaderItemInterface {
-    link: any;
-    active: any;
-    setActive: any;
+    link: HeaderLink;
+    active: string;
+    setActive: React.Dispatch<React.SetStateAction<string>>;
 }
 export const HeaderItem = (props: HeaderItemInterface) => {
     const { classes, cx } = useStyles();
@@ -14,7 +20,7 @@ export const HeaderItem = (props: HeaderItemInterface) => {
             className={cx(classes.link, {
                 [classes.linkActive]: props.active === props.link.link,
             })}
-            onClick={(event) => {
+            onClick={() => {
                 props.setActive(props.link.link);
             }}
         >
