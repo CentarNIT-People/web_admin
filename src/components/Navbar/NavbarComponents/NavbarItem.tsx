@@ -15,7 +15,7 @@ export const NavbarItem = (props: NavbarItemInterface) => {
             })}
             href={props.item.link}
             key={props.item.label}
-            onClick={(event) => {
+            onClick={() => {
                 props.setActive(props.item.label);
             }}
         >

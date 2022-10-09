@@ -2,8 +2,15 @@ import { Paper, Text, Title } from "@mantine/core";
 import { UserItemButtons } from "./UserItemButtons";
 import { useStyles } from "./UserItemStyles";
 
+type UserItemType = {
+    full_name:string,
+    status:string,
+    role:string,
+    username:string
+}
+
 interface userItemInterface {
-    item: any;
+    item: UserItemType;
 }
 
 export const UserItem = (props: userItemInterface) => {
