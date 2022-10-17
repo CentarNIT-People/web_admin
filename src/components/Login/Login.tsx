@@ -53,7 +53,7 @@ export const Login = () => {
                     onClick={() => {
                         axios
                             .get(
-                                `https://centarnit.deta.dev/admin/login?username=${username}&password=${password}`
+                                `https://centarnit.deta.dev/admin/login?username=${username}&password=${password}&role=admin`
                             )
                             .then((r: any) => {
                                 if (r.data === 200) {
