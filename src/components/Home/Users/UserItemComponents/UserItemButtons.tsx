@@ -10,7 +10,7 @@ const data = [
 
 const handleClick = (term: string, username: string) => {
     axios
-        .get(`https://orxdmz.deta.dev/admin/${term}?username=${username}`)
+        .get(`https://centarnit.deta.dev/admin/${term}/${username}?role=admin`)
         .then(() => window.location.reload());
 };
 export const UserItemButtons = (props: { item: any }) => {
