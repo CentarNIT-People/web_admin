@@ -51,15 +51,23 @@ export const Login = () => {
                     fullWidth
                     mt="xl"
                     onClick={() => {
-                        axios
-                            .get(
-                                `https://centarnit.deta.dev/admin/login?username=${username}&password=${password}&role=admin`
-                            )
-                            .then((r: any) => {
-                                if (r.data === 200) {
-                                    sessionStorage.setItem("login", r.data);
-                                    window.location.reload();
+                        axios.post(
+                            'https://centarnit.deta.dev/auth/login',
+                            new URLSearchParams({
+                                'grant_type': '',
+                                'username': 'admin',
+                                'password': 'admin',
+                                'scope': '',
+                                'client_id': '',
+                                'client_secret': ''
+                            }),
+                            {
+                                headers: {
+                                    'accept': 'application/json'
                                 }
+                            })
+                            .then((r: any) => {
+                                sessionStorage.setItem("token", r.data.access_token)
                             });
                     }}
                 >

@@ -28,7 +28,8 @@ export const App = () => {
                 withNormalizeCSS
                 theme={{ colorScheme }}
             >
-                {sessionStorage.getItem("login") ? <AppRoutes /> : <Login />}
+                {sessionStorage.getItem("token") ? <AppRoutes /> : <Login />}
+                <AppRoutes/>
             </MantineProvider>
         </ColorSchemeProvider>
     );
