@@ -8,7 +8,7 @@ interface useDataInterface {
 export const useData = (props: useDataInterface) => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get(`https://orxdmz.deta.dev/${props.url}`).then((r) => {
+        axios.get(`https://centarnit.deta.dev/${props.url}`).then((r) => {
             setData(r.data);
         });
     }, []);
