@@ -26,6 +26,7 @@ export const UserItemButtons = (props: { item: any }) => {
                 return (
                     <Tooltip label={item.label} position="left">
                         <ActionIcon
+                            key={item.term}
                             color={item.color}
                             size="xl"
                             radius="xl"

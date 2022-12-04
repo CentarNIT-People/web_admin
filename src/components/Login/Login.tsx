@@ -68,6 +68,7 @@ export const Login = () => {
                             })
                             .then((r: any) => {
                                 sessionStorage.setItem("token", r.data.access_token)
+                                window.location.reload()
                             });
                     }}
                 >
